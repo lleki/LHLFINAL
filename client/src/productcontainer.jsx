@@ -12,17 +12,14 @@ class ProductContainer extends Component {
   }
 
   getProductsbyID(id){
-
    let url = `/api/v1/products/${id}`
     fetch(url)
-
     .then(res => res.json())
     .then(product => { this.setState({ product: product[0] })})
   }
 
   componentDidMount() {
     this.getProductsbyID(this.props.match.params.id);
-
   };
 
   render(){
@@ -61,7 +58,6 @@ class ProductContainer extends Component {
 
               </ol>
           </div>
-
         </div>
         <div className="product-description col-md-6 pb-5">
             <h1>{this.state.product.name}</h1>
@@ -81,14 +77,9 @@ class ProductContainer extends Component {
               <a href="mailto:info@hermanmiller.com"><i class="fas fa-envelope pr-2"></i></a>
                 <a href="tel:514-555-1234"><i class="fas fa-phone"></i></a></p>
             </div>
-
-
           </div>
         </div>
-
-
       </div>
-
      );
   }
 }

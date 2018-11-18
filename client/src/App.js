@@ -36,19 +36,16 @@ handleLogout(){
     localStorage.clear();
     this.setState({user: '', loggedIn: false});
     window.location.replace('/');
-    console.log(this.state.user);
   }
 
 setCurrentUser(user){
   this.setState({user: user})
   localStorage.setItem('user', user.email);
-  console.log("setCurrentUser", user)
 }
 
 componentWillMount(){
       if(sessionStorage.getItem('token') != null){
           this.setState({loggedIn: true});
-          console.log("componentWillMount sets state to", this.state.loggedIn);
 
       }
       else{
@@ -69,13 +66,11 @@ componentWillMount(){
           <Route path="/login" component={(props) => <Login {...props} setCurrentUser={this.setCurrentUser} />}/>
           <Route path='/logout' render={this.handleLogout} />
           <Route path='/register' component={(props) => <Register {...props} />}/>
-
         </Switch>
        </div>
       </BrowserRouter>
      <Footer />
     </div>
-
     );
   }
 }

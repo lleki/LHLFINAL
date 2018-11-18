@@ -60,7 +60,6 @@ render(){
             </div>
             <div className="p-2">
               <input type="submit" value="Register"/>
-
             </div>
             </div>
           </form>

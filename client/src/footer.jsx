@@ -23,8 +23,6 @@ function Footer (props) {
               <p>Press</p>
               <p>Contact Us</p>
             </div>
-
-
             <div className="footer-copyright text-center">
               <div className="footerIcons">
                <i className="fab fa-instagram px-2"></i><i className="fab fa-facebook px-2"></i><i className="fab fa-twitter-square px-2"></i>
